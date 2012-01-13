@@ -1,0 +1,41 @@
+
+# Juego simple de piensa  en un numero 
+import random
+
+
+print "Bienvenido al juego"
+
+
+a = 0
+
+nombre=raw_input("Ingrese su nombre: ")
+print "Bienvenido al juego ",nombre," estoy pensando en un numero entre 1 y 20 adivinalo!! "
+numero=random.randint(1, 20)
+
+guess=0
+while a < 6:
+	guess=int(raw_input("Ingrese el numero: "))
+	#guess=int(guess)
+    
+	if (guess < numero):
+		print "El numero ingresado es bajo!!!"
+
+	if (guess > numero):
+		print "El numero es demasiado alto!!"
+
+	if (guess==numero):
+		break
+
+	a= a + 1
+
+# NOTA IMPORTANTE PARA REALIZAR PROGRAMAS EN PYTHON DEBES UTILIZAR OBLIGATORIAMENTE LOS TABS PORQUE SINO 
+
+# TE APARECERA LOS SIGUIENTES ERRORESIndentationError: unindent does not match any outer indentation level
+# ESTO SE DEBE A QUE NO ESPACIASTE BIEN PARA DARTE CUENTA EN EL TEXTO TE APARECE  |
+g=a
+
+if numero==guess:
+	print "Buen trabajo"+nombre+" usted adivino "+ str(a)
+
+if numero!=guess:
+    print "Lo siento el numero era "+str(numero)  
